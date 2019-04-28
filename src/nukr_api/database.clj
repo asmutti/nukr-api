@@ -36,6 +36,27 @@
              database
              operations))))
 
+(defn is-privacy-on? [id]
+  "checks if the user has the privacy attribute toggled to true"
+  (true? (get-in @example [:accounts id :privacy])))
+
+(defn is-friend? [id1 id2]
+  "checks if id2 is friend of id1"
+  (contains? (get-in @example [:accounts id1 :friends]) id2))
+
+(defn suggest-friends [id]
+  "this method should get an id of a user, look through its friends and return n number
+  of friends suggestion."
+  (let [:friends (get-in @nukr-database [:accounts id :friends])]
+    friends))
+
+
+(defn get-non-friends-set [id]
+  "")
+
+(defn rank-friend-suggestion [id non-friend-set]
+  "receives a set with ids of user that aren't friends of 'id', returns a sorted set")
+
 (comment
 
   (def example
@@ -48,14 +69,42 @@
                               :birthday "20/04/1992"
                               :sex "Male"
                               :privacy false
-                              :friends #{}
+                              :friends #{12346 19881 15502}
                               }
                        12346 {
                               :name "James Bond"
                               :birthday "01/01/1940"
                               :sex "Male"
                               :privacy false
-                              :friends #{}
+                              :friends #{12345}
+                              }
+                       19881 {
+                              :name "Thor Odinson"
+                              :birthday "01/01/240"
+                              :sex "Male"
+                              :privacy true
+                              :friends #{12345 15502 13923 19392}
+                              }
+                       15502 {
+                              :name "Loki Odinson"
+                              :birthday "03/02/240"
+                              :sex "Male"
+                              :privacy false
+                              :friends #{12345 19881}
+                              }
+                       13923 {
+                              :name "Tony Stark"
+                              :birthday "03/02/1970"
+                              :sex "Male"
+                              :privacy true
+                              :friends #{19881 19392}
+                              }
+                       19392 {
+                              :name "Steve Rogers"
+                              :birthday "05/10/1910"
+                              :sex "Male"
+                              :privacy false
+                              :friends #{13923 19881}
                               }
                        }
            }))
@@ -71,6 +120,8 @@
   {:get-account [(get-in @example [:accounts 12094])]}
 
   {:get-account [(get-in @example [:accounts 12345 :sex])]}
+
+
 
 
   (create-account 12314 "Loki Odinson" "10/02/300" "Male" true)
