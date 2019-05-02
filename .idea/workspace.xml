@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7c8a9dae-a821-48c8-9ebd-acfed4ae787c" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/classes/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nukr/handler.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="682">
+              <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="3" column="50" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/nukr/database.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>is-id-valid?</find>
+      <find>is-id-valid?</find>
+      <find>create-account!</find>
+      <find>14349</find>
+      <find>Pizza</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/nukr/validator.clj" />
+        <option value="$PROJECT_DIR$/src/nukr/controller.clj" />
+        <option value="$PROJECT_DIR$/project.clj" />
+        <option value="$PROJECT_DIR$/src/nukr/handler.clj" />
+        <option value="$PROJECT_DIR$/src/nukr/database.clj" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="90" />
+    <option name="y" value="-10" />
+    <option name="width" value="2580" />
+    <option name="height" value="1460" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="nukr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nukr" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nukr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nukr" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nukr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nukr" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="nukr" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/nukr" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Alexandre\Desktop\git\nubank\nukr\src\nukr" />
+    </key>
+  </component>
+  <component name="ReplState" timestamp="1556829354878">{:repl-history {:ide [], :local [{:command &quot;(def database\n  \&quot;for now, accounts are 5 random numbers\&quot;\n  (atom {\n         :name     \&quot;Nukr\&quot;\n         :accounts {\n                    12345 {\n                           :name     \&quot;Alexandre Mutti\&quot;\n                           :birthday \&quot;20/04/1992\&quot;\n                           :sex      \&quot;Male\&quot;\n                           :privacy  false\n                           :friends  #{12346 19881 15502}\n                           }\n                    12346 {\n                           :name     \&quot;James Bond\&quot;\n                           :birthday \&quot;01/01/1940\&quot;\n                           :sex      \&quot;Male\&quot;\n                           :privacy  false\n                           :friends  #{12345}\n                           }\n                    19881 {\n                           :name     \&quot;Thor Odinson\&quot;\n                           :birthday \&quot;01/01/240\&quot;\n                           :sex      \&quot;Male\&quot;\n                           :privacy  true\n                           :friends  #{12345 15502 13923 19392}\n                           }\n                    15502 {\n                           :name     \&quot;Loki Odinson\&quot;\n                           :birthday \&quot;03/02/240\&quot;\n                           :sex      \&quot;Male\&quot;\n                           :privacy  false\n                           :friends  #{12345 19881}\n                           }\n                    13923 {\n                           :name     \&quot;Tony Stark\&quot;\n                           :birthday \&quot;03/02/1970\&quot;\n                           :sex      \&quot;Male\&quot;\n                           :privacy  true\n                           :friends  #{19881 19392}\n                           }\n                    19392 {\n                           :name     \&quot;Steve Rogers\&quot;\n                           :birthday \&quot;05/10/1910\&quot;\n                           :sex      \&quot;Male\&quot;\n                           :privacy  false\n                           :friends  #{13923 19881}\n                           }\n                    }\n         }))&quot;, :offset 1943, :ns &quot;user&quot;} {:command &quot;(defn get-account [id]\n  \&quot;returns an account or nil\&quot;\n  (get-in @database [:accounts id]))&quot;, :offset 89, :ns &quot;user&quot;} {:command &quot;(class 12345)&quot;, :offset 13, :ns &quot;user&quot;} {:command &quot;(get-account 12345)&quot;, :offset 19, :ns &quot;user&quot;} {:command &quot;(ok (get-account 12345))&quot;, :offset 24, :ns &quot;user&quot;} {:command &quot;(GET \&quot;/user/\&quot; []\n     :return User\n     :query-params [id :- Long]\n     :summary \&quot;returns user from the db\&quot;\n     (ok {:result (s/maybe (db/get-account id))}))&quot;, :offset 158, :ns &quot;user&quot;} {:command &quot;(def app\n  (api\n    {:swagger\n     {:ui \&quot;/\&quot;\n      :spec \&quot;/swagger.json\&quot;\n      :data {:info {:title \&quot;Nukr-api\&quot;\n                    :description \&quot;Compojure Api example\&quot;}\n             :tags [{:name \&quot;api\&quot;, :description \&quot;some apis\&quot;}]}}}\n\n    (context \&quot;/api\&quot; []\n             :tags [\&quot;api\&quot;]\n\n             (GET \&quot;/plus\&quot; []\n                  :return {:result Long}\n                  :query-params [x :- Long, y :- Long]\n                  :summary \&quot;adds two numbers together\&quot;\n                  (ok {:result (+ x y)}))\n\n             (GET \&quot;/user/\&quot; []\n                  :return User\n                  :query-params [id :- Long]\n                  :summary \&quot;returns user from the db\&quot;\n                  (ok {:result (s/maybe (db/get-account id))}))\n\n             (POST \&quot;/user\&quot; []\n                   :return User\n                   :body [user (describe User \&quot;new user\&quot;)]\n                   :summary \&quot;adds user\&quot;\n                   (ok (db/create-account user)))\n\n             )))&quot;, :offset 960, :ns &quot;user&quot;} {:command &quot;(defn get-db []\n  @database)&quot;, :offset 28, :ns &quot;user&quot;} {:command &quot;(get-db)&quot;, :offset 8, :ns &quot;user&quot;} {:command &quot;(get-user 12345)&quot;, :offset 16, :ns &quot;user&quot;} {:command &quot;(db/get-account 12345)&quot;, :offset 22, :ns &quot;user&quot;} {:command &quot;(database)&quot;, :offset 10, :ns &quot;user&quot;} {:command &quot;(@database)&quot;, :offset 11, :ns &quot;user&quot;} {:command &quot;@database&quot;, :offset 9, :ns &quot;user&quot;}], :remote []}}</component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false" nameIsGenerated="true">
+      <module name="nukr" />
+      <setting name="replType" value="NREPL" />
+      <setting name="execution" value="LEININGEN" />
+      <setting name="jvmArgs" value="" />
+      <setting name="parameters" value="" />
+      <setting name="workingDir" value="$PROJECT_DIR$" />
+      <setting name="profiles" value="" />
+      <setting name="aliases" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
+      <setting name="replType" value="NREPL" />
+      <setting name="execution" value="LEININGEN" />
+      <module name="" />
+      <setting name="jvmArgs" value="" />
+      <setting name="parameters" value="" />
+      <setting name="workingDir" value="" />
+      <setting name="profiles" value="" />
+      <setting name="aliases" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Remote" activateToolWindowBeforeRun="false">
+      <setting name="host" value="" />
+      <setting name="port" value="0" />
+      <setting name="replType" value="0" />
+      <module name="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7c8a9dae-a821-48c8-9ebd-acfed4ae787c" name="Default Changelist" comment="" />
+      <created>1556803410158</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1556803410158</updated>
+      <workItem from="1556803411300" duration="23372000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="23372000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="UI Designer" order="0" />
+      <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info id="Designer" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.15734266" />
+      <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Database Changes" order="1" />
+      <window_info anchor="bottom" id="Terminal" order="2" visible="true" weight="0.2842742" />
+      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="4" />
+      <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="6" />
+      <window_info anchor="bottom" id="Find" order="7" />
+      <window_info anchor="bottom" id="Run" order="8" weight="0.3296371" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="12" weight="0.3296371" />
+      <window_info anchor="right" id="REPL" order="0" sideWeight="0.5042254" side_tool="true" weight="0.4270729" />
+      <window_info anchor="right" id="Database" order="1" sideWeight="0.49577466" weight="0.32967034" />
+      <window_info anchor="right" id="Leiningen" order="2" weight="0.32967034" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="7" sideWeight="0.49859154" weight="0.24975026" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/nukr.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="132">
+            <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nukr/handler.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="50" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nukr/validator.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nukr/controller.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nukr/database.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
