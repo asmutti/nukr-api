@@ -10,8 +10,8 @@
          }))
 
 ;; all accounts are stored in an atom, consistency is guaranteed during a swap! within the atom.
-(defn create-account! [id name birthday sex privacy]
-  "Creates one account and commit it to the database."
+(defn add-account! [id name birthday sex privacy]
+  "Creates one account and swap! it to the database."
   (let [account
         {:name     name
          :birthday birthday
@@ -19,6 +19,17 @@
          :privacy  privacy
          :friends  #{}}]
     (swap! nukr-database update-in [:accounts] assoc id account)))
+
+(defn create-account [account]
+  "creates the account if the id is not found in the db"
+  (if (not (is-id-valid? get-in account [:id]))
+    (create-account! (get-in account [:id])
+                     (get-in account [:name])
+                     (get-in account [:birthday])
+                     (get-in account [:sex])
+                     (get-in account [:privacy]))
+    nil))
+
 
 (defn operation [id-origin id-dest]
   "updates the database with the new friend id"
@@ -37,9 +48,25 @@
              operations))))
 
 (defn add-friend [id1 id2]
-  (transact! nukr-database
-             [(operation id1 id2)
-              (operation id2 id1)]))
+  (if (true? (and (is-id-valid? id1) (is-id-valid? id2)))
+    (if (not (is-already-friend? id1 id2))
+      (transact! nukr-database
+                 [(operation id1 id2)
+                  (operation id2 id1)])
+      nil)
+    nil))
+
+(defn is-already-friend? [id1 id2]
+  (contains? (get-in @nukr-database [:accounts id1 :friends]) id2))
+
+(defn is-id-valid? [id]
+  (if (some? (get-in @nukr-database [:accounts id]))
+    true
+    false))
+
+(defn get-account [id]
+  "returns an account or nil"
+  (get-in @nukr-database [:accounts id]))
 
 (defn is-privacy-on? [id]
   "checks if the user has the privacy attribute toggled to true"
