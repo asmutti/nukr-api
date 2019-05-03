@@ -1,7 +1,6 @@
 (ns nukr.database)
 
 
-; consider def or defonce
 (comment (def database
            "social media database"
            (atom {
@@ -10,7 +9,7 @@
                   })))
 
 (def database
-  "for now, accounts are 5 random numbers"
+  "Sample database"
   (atom {
          :name     "Nukr"
          :accounts {
@@ -24,7 +23,7 @@
                            }
                     12342 {
                            :id 12342
-                           :name     "Steve Strange"
+                           :name     "Stephen Strange"
                            :birthday "01/01/1979"
                            :sex      "Male"
                            :privacy  true
@@ -73,7 +72,7 @@
                     }
          }))
 
-(defn get-db []
+(defn get-database []
   @database)
 
 (defn get-account [id]
@@ -99,11 +98,6 @@
 (defn is-already-friend? [id1 id2]
   (contains? (get-friends-set id1) id2))
 
-(defn id-exists? [id]
-  (if (some? (get-account id))
-    true
-    false))
-
 ;; all accounts are stored in an atom, consistency is guaranteed during a swap! within the atom.
 (defn create-account! [id name birthday sex privacy]
   "Creates one account and swap! it to the database."
@@ -126,7 +120,7 @@
                      (get-in account [:privacy]))
     nil))
 
-;this method returns a new database copy after the new connection between friends are
+;this method returns a new database copy after the new connection between users are
 ;successfully made
 (defn transact! [database operations]
   (swap! database
@@ -142,7 +136,7 @@
   (fn [database]
     (update-in database [:accounts id-origin :friends] conj id-dest)))
 
-(defn add-friend [id1 id2]
+(defn prep-transaction [id1 id2]
   (if (true? (and (is-id-valid? id1) (is-id-valid? id2)))
     (if (not (is-already-friend? id1 id2))
       (transact! database
@@ -151,14 +145,17 @@
       nil)
     nil))
 
-(defn suggest-friends [id]
-  "this method should get an id of a user, look through its friends and return n number
-  of friends suggestion."
-  (let [friends (get-in @database [:accounts id :friends])]))
+(defn add-friend [id1 id2]
+  (if (not= (prep-transaction id1 id2) nil)
+    (get-account id1)
+    nil))
+
+;; -- methods related to the friend suggestion. --
 
 (defn count-common-friends [id1 id2]
   "id1 is one user who will get the recommendation
-  id2 is one user who is not friend of id1"
+  id2 is one user who is not friend of id1
+  returns the number of common friends"
   (count
     (clojure.set/intersection
       (get-friends-set id1) (get-friends-set id2)))
@@ -170,7 +167,7 @@
             (reduce (fn [acc j]
                       (if (and (false? (is-friend? j id))
                                (false? (is-privacy-on? j)))
-                        (if (not= id j)
+                        (if (not= id j)                     ;checks if it's not the id itself
                           (conj acc j)
                           acc)
                         acc))
