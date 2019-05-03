@@ -5,4 +5,5 @@
    :ring {:handler nukr.handler/app}
    :uberjar-name "server.jar"
    :profiles {:dev {:dependencies [[javax.servlet/javax.servlet-api "3.1.0"]]
-                   :plugins [[lein-ring "0.12.5"]]}})
+                   :plugins [[lein-ring "0.12.5"]
+                             [lein-midje "3.2.1"]]}})
