@@ -2,7 +2,8 @@
   (:require [compojure.api.sweet :refer :all]
             [ring.util.http-response :refer :all]
             [nukr.database :refer :all]
-            [schema.core :as s]))
+            [schema.core :as s])
+  (:import (clojure.lang Keyword)))
 
 (s/defschema User
   {:id                       Long
@@ -12,6 +13,8 @@
    :privacy                  s/Bool
    (s/optional-key :friends) #{Long}})
 
+(s/defschema Suggestions
+  {Keyword s/Int})
 
 (def app
   (api
@@ -19,8 +22,9 @@
      {:ui   "/"
       :spec "/swagger.json"
       :data {:info {:title       "Nukr-api"
-                    :description "Compojure Api example"}
-             :tags [{:name "api", :description "some apis"}]}}}
+                    :description "Compojure API built as take home challenge
+                    for a Software Engineer position at Nubank"}
+             :tags [{:name "api", :description "social media endpoints"}]}}}
 
     (context "/api" []
       :tags ["api"]
@@ -32,7 +36,7 @@
         (ok (get-account id)))
 
       (GET "/user/:id/friend-suggestion" []
-        :return User
+        :return Suggestions
         :path-params [id :- Long]
         :summary "returns a list of users as suggestion to be friend."
         (ok (get-friends-suggestions id)))
@@ -47,7 +51,4 @@
         :path-params [id :- Long, fid :- Long]
         :summary "Link two users as friends."
         (ok (add-friend id fid)))
-
-
-
       )))
