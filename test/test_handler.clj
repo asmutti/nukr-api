@@ -8,13 +8,12 @@
   (cheshire/parse-string (slurp body) true))
 
 
-(deftest a-test
+(deftest http-test
 
-  (testing "Test GET request to /hello?name={a-name} returns expected response"
+  (testing "Test GET request to /api/adduser/:id returns expected response"
     (let [response (app (-> (mock/request :get  "/api/user/12345")))
           body     (parse-body (:body response))]
       (is (= (:status response) 200))))
-
 
   (testing "Test POST request to /echo returns expected response"
        (let [user {:id       98989
@@ -29,9 +28,3 @@
                                (mock/body (cheshire/generate-string user))))
              body (parse-body (:body response))]
          (is (= (:status response) 200)))))
-)
-
-
-
-
-
