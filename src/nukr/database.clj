@@ -92,10 +92,6 @@
   (true? (get-in @database [:accounts id :privacy])))
 
 (defn is-friend? [id1 id2]
-  "checks if id2 is friend of id1"
-  (contains? (get-in @database [:accounts id1 :friends]) id2))
-
-(defn is-already-friend? [id1 id2]
   (contains? (get-friends-set id1) id2))
 
 ;; all accounts are stored in an atom, consistency is guaranteed during a swap! within the atom.
@@ -138,7 +134,7 @@
 
 (defn prep-transaction [id1 id2]
   (if (true? (and (is-id-valid? id1) (is-id-valid? id2)))
-    (if (not (is-already-friend? id1 id2))
+    (if (not (is-friend? id1 id2))
       (transact! database
                  [(operation id1 id2)
                   (operation id2 id1)])
@@ -146,9 +142,12 @@
     nil))
 
 (defn add-friend [id1 id2]
-  (if (not= (prep-transaction id1 id2) nil)
-    (get-account id1)
+  (if (and (is-id-valid? id1) (is-id-valid? id2))
+    (if (not= (prep-transaction id1 id2) nil)
+      (get-account id1)
+      nil)
     nil))
+
 
 ;; -- methods related to the friend suggestion. --
 
@@ -188,5 +187,10 @@
                    (rank-suggestions id non-friend-set))))
 
 (defn get-friends-suggestions [id]
-  (let [non-friend-set (get-non-friends-set id)]
-    (rank-suggestions id non-friend-set)))
+  "get friend suggestions, returns nil if the user does not exists"
+  (if (not= (get-account id) nil)
+    (let [non-friend-set (get-non-friends-set id)]
+      (rank-suggestions id non-friend-set))
+    nil))
+
+
