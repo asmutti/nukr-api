@@ -1,6 +1,6 @@
 # Nukr API
 
-This project is part of Nubank's hiring process for a Software Engineer position. It consists of a REST API 
+This project is part of some company hiring process for a Software Engineer position. It consists of a REST API 
 where we can simulate connections between users.
 
 The API was written using Compojure-API. All the interactions with the API can be done using the swagger interface.
